@@ -63,8 +63,15 @@
         section { padding: var(--spacing-xxl) 3.5rem; scroll-margin-top: var(--header-height); }
         section:nth-child(even) { background: rgba(19,24,54,0.25); }
         .section-title {
-            font-size: 2.4rem; margin-bottom: var(--spacing-lg);
-            text-align: center; font-weight: 700; letter-spacing: -0.02em;
+            font-size: 2.4rem; text-align: center;
+            font-weight: 700; letter-spacing: -0.02em;
+        }
+        .section-divider {
+            width: 60%;
+            max-width: 260px;
+            height: 1px;
+            margin: 0.75rem auto var(--spacing-lg);
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
         }
 
         /* ===== HERO ===== */
@@ -318,7 +325,6 @@
             const target = document.getElementById('portfolio');
             if(target) obs.observe(target);
 
-            // Smooth-scroll for nav links (ensures consistent behavior)
             document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => {
                 link.addEventListener('click', function(ev){
                     const id = this.getAttribute('href').substring(1);
@@ -371,6 +377,7 @@
     <!-- 1. HOME -->
     <section id="home" class="hero">
         <h1>Chitra Srisankar</h1>
+        <div class="section-divider"></div>
         <div class="hero-badges">
             <div class="hero-badge"><span>🎯</span><span>Learning &amp; Enablement Program Manager</span></div>
             <div class="hero-badge"><span>🤖</span><span>AI-First Enablement</span></div>
@@ -382,6 +389,7 @@
     <!-- 2. EXPERTISE -->
     <section id="experience">
         <h2 class="section-title">Areas of Expertise</h2>
+        <div class="section-divider"></div>
         <div class="pillars">
             <div class="pillar-card">
                 <h3>🚀 Enterprise Enablement Programs at Scale</h3>
@@ -413,6 +421,7 @@
     <!-- 3. IMPACT STORIES / PROJECTS -->
     <section id="projects">
         <h2 class="section-title">Impact Stories</h2>
+        <div class="section-divider"></div>
         <p style="text-align:center; max-width:800px; margin:0 auto var(--spacing-md); font-size:1.05rem; color:var(--color-text-light);">Program design, stakeholder engagement, and measurable outcomes. Click any card to explore the full story.</p>
 
         <div class="filter-buttons">
@@ -648,6 +657,7 @@
     <!-- 4. PORTFOLIO SHOWCASE -->
     <section id="portfolio">
         <h2 class="section-title">Portfolio Showcase</h2>
+        <div class="section-divider"></div>
         <p style="text-align:center; font-size:0.95rem; font-style:italic; opacity:0.85; margin-bottom:var(--spacing-lg);">Example shown for interview review purposes only.</p>
 
         <div class="artifacts-grid">
@@ -693,6 +703,7 @@
     <!-- 5. IMPACT METRICS -->
     <section id="metrics">
         <h2 class="section-title">Impact Metrics</h2>
+        <div class="section-divider"></div>
         <div class="metrics-grid">
             <div class="metric-card"><div class="metric-number">400+</div><div class="metric-label">New Workmates Onboarded (6 months)</div></div>
             <div class="metric-card"><div class="metric-number">4.89/5</div><div class="metric-label">Average Satisfaction Score (CX 101)</div></div>
@@ -701,20 +712,18 @@
             <div class="metric-card"><div class="metric-number">664%</div><div class="metric-label">CX Central View Increase</div></div>
             <div class="metric-card"><div class="metric-number">207%</div><div class="metric-label">Paradox Readiness Lift</div></div>
             <div class="metric-card"><div class="metric-number">85%</div><div class="metric-label">Sana Readiness Lift</div></div>
-            <div class="metric-card"><div class="metric-number">134</div><div class="metric-label">CX Central Course Completions (Optional)</div></div>
-            <div class="metric-card"><div class="metric-number">420+</div><div class="metric-label">Workmates Enabled via Gemini Gems Live Labs</div></div>
-            <div class="metric-card"><div class="metric-number">100%</div><div class="metric-label">ID Jam Session Adoption in Readiness COE</div></div>
         </div>
     </section>
 
     <!-- 6. AWARDS -->
     <section id="recognition">
         <h2 class="section-title">Awards &amp; Recognition</h2>
+        <div class="section-divider"></div>
         <div class="awards-grid">
             <div class="artifact-card">
                 <div class="artifact-icon">🏆</div>
                 <h4>Diamond Award</h4>
-                <p class="artifact-description"><strong>FY26 Q2 &amp; Q3</strong> — Recognized by Alex Salicrup, Sr. Director – CX Enablement, for major strategic contribution and the "Glad to be Here" mindset.</p>
+                <p class="artifact-description"><strong>FY26 Q2</strong> — Recognized by Alex Salicrup, Sr. Director – CX Enablement, for major strategic contribution and the "Glad to be Here" mindset.</p>
             </div>
             <div class="artifact-card">
                 <div class="artifact-icon">⭐</div>
@@ -737,6 +746,7 @@
     <!-- 7. FEEDBACK -->
     <section id="voices">
         <h2 class="section-title">Feedback</h2>
+        <div class="section-divider"></div>
         <p style="text-align:center; max-width:800px; margin:0 auto var(--spacing-xl); font-size:1.05rem; color:var(--color-text-light);">Selected feedback from leaders, partners, and learners.</p>
 
         <div class="carousel-container">
@@ -751,17 +761,23 @@
                     </div>
                     <div class="testimonial-card">
                         <div class="quote-icon">"</div>
-                        <p class="testimonial-text">Thank you so much for your constant willingness to serve as a mentor and guide for others on our team. Your expertise in learning and instructional design elevates our entire team.</p>
-                        <div class="testimonial-author"><strong>Elizabeth Smith</strong><br>Director, CX Enablement</div>
+                        <p class="testimonial-text">Every quarter I personally recognize a workmate whose performance has made a major strategic contribution to the team. This quarter I have selected you. Bravo Zulu!</p>
+                        <div class="testimonial-author"><strong>Alex Salicrup</strong><br>Sr. Director, CX Enablement</div>
                     </div>
                     <div class="testimonial-card">
                         <div class="quote-icon">"</div>
-                        <p class="testimonial-text">The Amazing Race to introduce the new CX Central was an absolute stroke of genius—fresh, fun, and incredibly engaging. This was hands down one of the best trainings I've ever had.</p>
-                        <div class="testimonial-author"><strong>Nancy Houston</strong><br>Principal Customer Success Manager</div>
+                        <p class="testimonial-text">Thank you so much for your constant willingness to serve as a mentor and guide for others on our team. Your expertise in learning and instructional design elevates our entire team.</p>
+                        <div class="testimonial-author"><strong>Elizabeth Smith</strong><br>Director, CX Enablement</div>
                     </div>
                 </div>
+
                 <!-- Set 2 -->
                 <div class="testimonial-set">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">The Amazing Race to introduce the new CX Central was an absolute stroke of genius—fresh, fun, and incredibly engaging. With so much happening, this could have felt like just another task. Instead, it was one of the best trainings I've ever had.</p>
+                        <div class="testimonial-author"><strong>Nancy Houston</strong><br>Principal Customer Success Manager</div>
+                    </div>
                     <div class="testimonial-card">
                         <div class="quote-icon">"</div>
                         <p class="testimonial-text">Chitra and I collaborated on an eLearning project with a lot of moving parts and quick deadlines. Thank you for being an outstanding partner and learning expert throughout the design and development process!</p>
@@ -769,15 +785,11 @@
                     </div>
                     <div class="testimonial-card">
                         <div class="quote-icon">"</div>
-                        <p class="testimonial-text">Thank you for the LD Jam session—it was great to learn about all the new tools our team is using. Your knowledge‑sharing helps us stay ahead.</p>
-                        <div class="testimonial-author"><strong>Nikoo Yahyazadeh</strong><br>Learning Designer, CX Enablement</div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="quote-icon">"</div>
                         <p class="testimonial-text">Thank you for your willingness to consult, advise, and champion the use of Sana Learn. You are my go‑to for understanding capabilities and how to apply them to our learning solutions.</p>
                         <div class="testimonial-author"><strong>Annie Angelo</strong><br>Senior Principal, CX Enablement</div>
                     </div>
                 </div>
+
                 <!-- Set 3 -->
                 <div class="testimonial-set">
                     <div class="testimonial-card">
@@ -787,7 +799,7 @@
                     </div>
                     <div class="testimonial-card">
                         <div class="quote-icon">"</div>
-                        <p class="testimonial-text">Chitra has been an invaluable team member, consistently assisting in resolving learning‑related inquiries. Your guidance has significantly enhanced the quality of customer service we provide.</p>
+                        <p class="testimonial-text">Chitra has been an invaluable team member, consistently assisting in resolving learning‑related inquiries. Your prompt responses and thorough guidance have significantly enhanced the quality of customer service we provide.</p>
                         <div class="testimonial-author"><strong>Cruz Payan</strong><br>Instructional Designer, Customer Support</div>
                     </div>
                     <div class="testimonial-card">
@@ -804,6 +816,7 @@
     <!-- 8. ABOUT -->
     <section id="about">
         <h2 class="section-title">About Me</h2>
+        <div class="section-divider"></div>
         <div style="max-width:1000px; margin:0 auto;">
             <p style="text-align:center; font-size:1.05rem; max-width:800px; margin:0 auto 2rem; color:var(--color-text-light);">
                 Thrives in fast‑moving, high‑ambiguity environments where the brief is "figure it out and make it excellent." Career spans education, SaaS, and enterprise technology—united by a focus on turning strategic vision into learning experiences that change behavior.
@@ -830,6 +843,7 @@
     <!-- 9. CONNECT -->
     <section id="contact">
         <h2 class="section-title">Connect</h2>
+        <div class="section-divider"></div>
         <div class="contact-info">
             <p style="font-size:1.05rem; max-width:600px; margin:0 auto var(--spacing-lg); color:var(--color-text-light);">Interested in learning enablement programs, instructional design, or AI adoption strategies? Let's talk.</p>
             <div class="contact-links">
