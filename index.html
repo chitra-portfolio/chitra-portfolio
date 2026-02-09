@@ -188,11 +188,23 @@
         .awards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: var(--spacing-lg); margin-top: var(--spacing-xl); }
 
         /* ===== FEEDBACK CAROUSEL ===== */
-        .testimonial-card { background: rgba(255,255,255,0.03); padding: 2rem; border-radius: 20px; border: 1px solid var(--color-border); transition: 0.3s; }
+        .testimonial-card {
+            background: rgba(255,255,255,0.03);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid var(--color-border);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
         .testimonial-card:hover { border-color: var(--color-primary); }
         .quote-icon { font-size: 3rem; opacity: 0.25; color: var(--color-primary); font-family: Georgia, serif; }
         .testimonial-text { font-size: 1rem; margin: 0.75rem 0 1.25rem; line-height: 1.7; font-style: italic; }
-        .testimonial-author { border-top: 1px solid var(--color-border); padding-top: 0.75rem; }
+        .testimonial-author {
+            border-top: 1px solid var(--color-border);
+            padding-top: 0.75rem;
+            margin-top: auto;
+        }
         .testimonial-author strong { color: var(--color-primary); font-size: 1.05rem; }
         .carousel-container { position: relative; padding: 0 50px; margin-top: var(--spacing-xl); }
         .testimonials-carousel { position: relative; min-height: 350px; }
@@ -459,7 +471,7 @@
                             <span class="project-category">AI Strategy</span>
                             <h3>EverydayAI for CX</h3>
                             <p><strong>Challenge:</strong> Drive organizational AI adoption toward a 62% usage target in FY26 by moving from AI curiosity to day‑to‑day habit.</p>
-                            <p><strong>Solution:</strong> Designed EverydayAI learning experiences on CX Central—including an interactive prompt-engineering course—built custom AI GEMs, and led VILT sessions and live labs that converted real CX workflows into reusable AI-powered templates.</p>
+                            <p><strong>Solution:</strong> Designed EverydayAI learning experiences on CX Central—including an interactive prompt‑engineering course—built custom AI GEMs, and led VILT sessions and live labs that converted real CX workflows into reusable AI‑powered templates.</p>
                             <p><strong>Impact:</strong> VILT enablement for 690+ Workmates on Gemini GEMs and Miro AI, a growing library of reusable GEMs, and clear visibility into AI usage as an operational metric.</p>
                             <div><span class="project-tag">AI Adoption</span><span class="project-tag">VILT</span><span class="project-tag">GEM Design</span></div>
                         </div>
@@ -702,7 +714,7 @@
             <div class="artifact-card">
                 <div class="artifact-icon">✨</div>
                 <h4>Vibe Coding</h4>
-                <p class="artifact-description">Scalable solutions that cut build time while delivering elevated, interactive experiences that increase engagement.</p>
+                <p class="artifact-description">Templates that cut build time while delivering elevated, interactive experiences that boost engagement.</p>
                 <button class="artifact-btn" onclick="window.open('https://drive.google.com/drive/u/0/folders/159soCgMcc6KuDaXvKD_I_3ANW3b2OomH','_blank')">Explore Vibe Coding</button>
             </div>
         </div>
@@ -760,7 +772,7 @@
         <div class="carousel-container">
             <button class="carousel-btn prev" onclick="moveCarousel(-1)">‹</button>
             <div class="testimonials-carousel">
-                <!-- Set 1 -->
+                <!-- Set 1: first three reordered -->
                 <div class="testimonial-set active">
                     <div class="testimonial-card">
                         <div class="quote-icon">"</div>
@@ -769,17 +781,17 @@
                     </div>
                     <div class="testimonial-card">
                         <div class="quote-icon">"</div>
+                        <p class="testimonial-text">This onboarding is the best I've seen in my 20‑year career. The CX 101 experience was deep, meaningful, and incredibly fun—and the Jeopardy game was brilliant.</p>
+                        <div class="testimonial-author"><strong>Alex Salicrup</strong><br>Sr. Director, CX Enablement</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="quote-icon">"</div>
                         <p class="testimonial-text">Thank you so much for your constant willingness to serve as a mentor and guide for others on our team. Your expertise in learning and instructional design elevates our entire team.</p>
                         <div class="testimonial-author"><strong>Elizabeth Smith</strong><br>Director, CX Enablement</div>
                     </div>
-                    <div class="testimonial-card">    
-                        <div class="quote-icon">"</div>
-                        <p class="testimonial-text">Chitra, you are adding a level of value to our CX organization that is well beyond my expectations. I appreciate your leadership, candor and Glad to be here mindset execution. Yopu have been a key to CXe success in this first half of FY26.</p>
-                        <div class="testimonial-author"><strong>Alex Salicrup</strong><br>Sr. Director, CX Enablement</div>
-                    </div>
                 </div>
 
-                <!-- Set 2 -->
+                <!-- Set 2 (unchanged) -->
                 <div class="testimonial-set">
                     <div class="testimonial-card">
                         <div class="quote-icon">"</div>
@@ -798,7 +810,7 @@
                     </div>
                 </div>
 
-                <!-- Set 3 -->
+                <!-- Set 3 (unchanged) -->
                 <div class="testimonial-set">
                     <div class="testimonial-card">
                         <div class="quote-icon">"</div>
